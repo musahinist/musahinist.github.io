@@ -41,7 +41,7 @@ To publish at **`https://musahinist.github.io/resume/`**:
     - Select Source: **Deploy from a branch** (Branch: `main`, Folder: `/`).
     - Save.
 
-🎉 Your CV will be live at: `https://musahinist.github.io/resume/`
+🎉 Your CV will be live at: `https://musahinist.github.io/  `
 
 
 
