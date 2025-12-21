@@ -21,26 +21,26 @@ This is a personal CV/Resume website built with HTML, CSS, and JavaScript. It fe
 2. Edit `style.css` to change colors, fonts, or spacing.
 3. The PDF button configuration is located at the bottom of `index.html` in the `<script>` tag.
 
-## 🚀 Deployment (GitHub Pages)
+## 🚀 Deployment (Root Domain)
 
-This project is ready for **GitHub Pages**.
+To publish at **`https://musahinist.github.io`** (without `/resume` at the end):
 
-1.  **Create Repository:** Create a new repository on GitHub (e.g., `my-cv`).
+1.  **Repository Name:** You must create a repository named exactly **`musahinist.github.io`**.
 2.  **Push Code:**
     ```bash
     git init
     git add .
     git commit -m "Initial commit"
     git branch -M main
-    git remote add origin https://github.com/<username>/<repo-name>.git
+    # Ensure the repo URL matches your username.github.io pattern
+    git remote add origin https://github.com/musahinist/musahinist.github.io.git
     git push -u origin main
     ```
 3.  **Activate Pages:**
-    - Go to your Repository **Settings**.
-    - Click **Pages** in the left sidebar.
-    - Under **Source**, select `Deploy from a branch`.
-    - Select **Branch:** `main` and **Folder:** `/(root)`.
-    - Click **Save**.
+    - Go to Repository **Settings** > **Pages**.
+    - Select Source: **Deploy from a branch** (Branch: `main`, Folder: `/`).
+    - Save.
 
-🎉 Your CV will be live at: `https://<username>.github.io/<repo-name>/`
+🎉 Your CV will be live at: `https://musahinist.github.io`
+
 
