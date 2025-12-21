@@ -1,0 +1,437 @@
+:root {
+  --primary-color: #0f172a;
+  /* Slate 900 - Darker, more premium */
+  --secondary-color: #64748b;
+  /* Slate 500 */
+  --accent-color: #2563eb;
+  /* Royal Blue - Vibrant but professional */
+  --accent-light: #eff6ff;
+  --text-color: #334155;
+  /* Slate 700 */
+  --bg-color: #ffffff;
+  --section-line: #e2e8f0;
+  --font-heading: 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.65;
+  /* Increased slightly for breathability */
+  font-size: 15px;
+  /* Up from 14px */
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 900px;
+  /* Slightly wider to accommodate larger text */
+  margin: 0 auto;
+  background: white;
+  padding: 0;
+  /* Removing padding from container to let header stretch */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  /* Softer shadow */
+  border-radius: 0;
+  overflow: hidden;
+  /* For header border radius */
+  min-height: 100vh;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.2s;
+  font-weight: 500;
+  /* Slightly bolder links */
+}
+
+/* Premium Header Design */
+header {
+  background: linear-gradient(to right, #1e293b, #0f172a);
+  color: white;
+  padding: 40px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.header-left h1 {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  color: white;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 8px;
+  line-height: 1;
+}
+
+.header-left h2 {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  /* Light slate text */
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.header-right {
+  text-align: right;
+  font-size: 0.9rem;
+  line-height: 2;
+}
+
+.header-right a {
+  color: #cbd5e1;
+  text-decoration: none;
+  display: block;
+  transition: color 0.2s;
+}
+
+.header-right a:hover {
+  color: white;
+}
+
+.header-right i {
+  width: 20px;
+  text-align: center;
+  color: #60a5fa;
+  /* Light blue icons */
+  margin-right: 8px;
+}
+
+/* Content Padding */
+section {
+  padding: 0 50px;
+  margin-bottom: 35px;
+}
+
+/* Modern Section Titles */
+h3.section-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  border-bottom: 2px solid var(--section-line);
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  position: relative;
+}
+
+h3.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background-color: var(--accent-color);
+}
+
+/* Summary */
+.summary p {
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.8;
+  max-width: 95%;
+}
+
+/* Experience Cards */
+.job-item {
+  margin-bottom: 30px;
+  padding-left: 20px;
+  border-left: 2px solid var(--section-line);
+  position: relative;
+  transition: border-left-color 0.3s;
+}
+
+.job-item:hover {
+  border-left-color: var(--accent-color);
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.job-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--primary-color);
+}
+
+.company a {
+  font-weight: 600;
+  color: var(--accent-color);
+  /* Make company pop */
+  text-decoration: none;
+}
+
+.company a:hover {
+  text-decoration: underline;
+}
+
+.job-meta {
+  font-size: 0.85rem;
+  color: var(--secondary-color);
+  font-weight: 600;
+  background: #f8fafc;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.job-details ul {
+  list-style: none;
+}
+
+.job-details li {
+  position: relative;
+  margin-bottom: 8px;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.job-details li::before {
+  content: "•";
+  color: var(--accent-color);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.job-details strong,
+.job-details a {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+/* Skills Categories */
+.skill-category {
+  margin-bottom: 15px;
+}
+
+.category-title {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+}
+
+/* Skills Grid - Clean & Modern */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  background-color: white;
+  color: var(--primary-color);
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid var(--section-line);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Education Layout */
+.education-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px dotted var(--section-line);
+}
+
+.education-item:last-child {
+  border-bottom: none;
+}
+
+.degree {
+  font-weight: 700;
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+.school {
+  color: var(--secondary-color);
+  font-size: 0.95rem;
+}
+
+/* ATS & Print Optimization */
+@media print {
+  body {
+    background: white;
+    font-size: 9.5pt;
+  }
+
+  .container {
+    box-shadow: none;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  header {
+    background: none !important;
+    /* Save ink */
+    color: black !important;
+    padding: 0 0 20px 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #000;
+  }
+
+  .header-left h1 {
+    color: black !important;
+  }
+
+  .header-left h2 {
+    color: #444 !important;
+  }
+
+  .header-right a {
+    color: black !important;
+  }
+
+  .header-right i {
+    color: black !important;
+  }
+
+  /* Ensure text is black for OCR/ATS */
+  p,
+  li,
+  span,
+  div {
+    color: black !important;
+  }
+
+  .job-item {
+    padding-left: 0;
+    border-left: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: black !important;
+  }
+}
+
+/* --- Alternative Header Styles --- */
+
+/* 1. Modern Premium Centered Header */
+header.header-centered {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  /* Premium Dark Gradient */
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 45px 20px;
+  border-bottom: 4px solid var(--accent-color);
+  /* Bottom accent line */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+header.header-centered .header-left {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+header.header-centered .header-left h1 {
+  color: white;
+  font-size: 3.5rem;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header.header-centered .header-left h2 {
+  color: #94a3b8;
+  /* Slate 400 */
+  font-size: 1.3rem;
+  letter-spacing: 4px;
+  font-weight: 500;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+header.header-centered .header-right {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* Stack rows vertically */
+  align-items: center;
+  gap: 12px;
+  /* Space between rows */
+  width: 100%;
+}
+
+.contact-row,
+.social-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0;
+}
+
+header.header-centered .header-right a,
+header.header-centered .header-right div {
+  color: #e2e8f0;
+  /* Slate 200 */
+  font-size: 0.95rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 12px;
+  position: relative;
+  transition: all 0.2s;
+}
+
+/* Separators removed for cleaner look */
+.contact-row>*:not(:last-child)::after,
+.social-row>*:not(:last-child)::after {
+  content: none;
+}
+
+/* Explicitly remove separator from the last item or specific types if needed */
+.contact-row>*:last-child::after,
+.social-row>*:last-child::after {
+  content: none;
+  display: none;
+}
+
+header.header-centered .header-right i {
+  color: var(--accent-color);
+  /* Bright Blue icons */
+  margin-right: 8px;
+  font-size: 1em;
+}
+
+header.header-centered .header-right a:hover {
+  color: white;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+header.header-centered .header-right a:hover i {
+  color: #60a5fa;
+  /* Lighter blue on hover */
+}

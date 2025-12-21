@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musa SAHIN - Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Fixed PDF Download Button -->
+    <button id="pdf-download-btn" onclick="generatePDF()" title="Download as PDF" style="
+        position: fixed !important;
+        top: 25px !important;
+        right: 25px !important;
+        background-color: #2563eb !important;
+        color: white !important;
+        border: none !important;
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 50% !important;
+        font-size: 20px !important;
+        cursor: pointer !important;
+        box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4) !important;
+        z-index: 2147483647 !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        transition: transform 0.2s !important;
+    ">
+        <i class="fa-solid fa-file-pdf"></i>
+    </button>
+
+
+    <div class="container">
+        <header class="header-centered">
+            <div class="header-left">
+                <h1>Musa SAHIN</h1>
+                <h2>Senior Software Engineer</h2>
+            </div>
+            <div class="header-right">
+                <div class="contact-row">
+                    <a href="mailto:sahinmusa@gmail.com"><i class="fa-solid fa-envelope"></i> sahinmusa@gmail.com</a>
+                    <a href="tel:+905053836143"><i class="fa-solid fa-phone"></i> +90 505 383 61 43</a>
+                    <div><i class="fa-solid fa-location-dot"></i> Istanbul, Turkiye</div>
+                </div>
+                <div class="social-row">
+                    <a href="https://tr.linkedin.com/in/musa-sahin" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/musahinist" target="_blank"><i class="fa-brands fa-github"></i>
+                        GitHub</a>
+                    <a href="https://stackoverflow.com/users/8354697/musa-sahin" target="_blank"><i
+                            class="fa-brands fa-stack-overflow"></i> StackOverflow</a>
+                    <a href="https://www.youtube.com/@alchemist9240" target="_blank"><i
+                            class="fa-brands fa-youtube"></i> Youtube</a>
+                </div>
+            </div>
+        </header>
+
+        <section class="summary">
+            <h3 class="section-title">Professional Summary</h3>
+            <p>
+                Software Engineer with 9 years of experience. Primary focus on <strong>Flutter (7 years)</strong> and
+                <strong>NestJS (2 years)</strong>, with additional practical experience in native <strong>iOS
+                    (Swift)</strong> and
+                <strong>Android (Kotlin)</strong>.
+                Experienced in building scalable architectures, implementing mobile security standards, and establishing
+                automated testing workflows through <strong>TDD</strong> & Clean Architecture.
+                Specialized in <strong>FinTech, Geomatics, E-commerce, Education, and Gaming</strong> domains.
+                Conducted thesis research on <strong>NLP</strong> (Natural Language Processing) and actively
+                leverages specific <strong>AI tools</strong> to accelerate development life-cycles.
+                Practices Test-Driven Development (TDD) and follows clean code principles to maintain high software
+                quality.
+            </p>
+        </section>
+
+        <section class="experience">
+            <h3 class="section-title">Work Experience</h3>
+
+            <!-- Orion Innovation -->
+            <div class="job-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Senior Mobile Developer</span> <span
+                            style="margin: 0 5px; color: #ccc;">|</span> <span class="company"><a
+                                href="https://www.orioninc.com/" target="_blank">Orion Innovation</a></span>
+                    </div>
+                    <div class="job-meta">Oct 2024 - Present</div>
+                </div>
+                <div class="job-details">
+                    <ul>
+                        <li>Developing <strong><a href="https://www.huntstand.com/"
+                                    target="_blank">HunStand</a></strong>, a cross-platform (Mobile & Web) application
+                            for Hunting and Land Management using Flutter.</li>
+                        <li>Leveraging <strong>Generative AI tools</strong> to optimize code quality, automate
+                            refactoring, and accelerate feature implementation.</li>
+                        <li>Updated the internal <strong>MapSDK</strong> to improve geospatial rendering performance
+                            across multiple products.</li>
+                        <li>Implemented <strong>Test-Driven Development (TDD)</strong> workflows, addressing technical
+                            debt in legacy modules.</li>
+                        <li>Conducting code reviews and mentoring team members on modular architecture and state
+                            management.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Engineerica Inc -->
+            <div class="job-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Software Developer</span> <span
+                            style="margin: 0 5px; color: #ccc;">|</span> <span class="company"><a
+                                href="https://www.engineerica.com/" target="_blank">Engineerica Inc</a> (Remote)</span>
+                    </div>
+                    <div class="job-meta">Jul 2023 - Oct 2025</div>
+                </div>
+                <div class="job-details">
+                    <ul>
+                        <li>Developed and maintained <strong><a
+                                    href="https://apps.apple.com/ng/app/accubus/id6475717217"
+                                    target="_blank">AccuBus</a></strong>, a mobile application for monitoring state
+                            school bus logistics.</li>
+                        <li>Integrated <strong>AI-assisted workflows</strong> in the development process to enhance
+                            problem-solving speed and efficient code documentation.</li>
+                        <li>Rewrote the <strong><a href="https://apps.apple.com/us/app/iaccu/id414711091"
+                                    target="_blank">iAccu</a></strong> attendance mobile and kiosk application in
+                            Flutter for cross-platform support.</li>
+                        <li>Contributed to the <strong><a href="https://apps.apple.com/us/app/accudemia/id1673109841"
+                                    target="_blank">Accudemia</a></strong> academic center management system using
+                            native Swift and Kotlin.</li>
+                        <li>Developed <strong><a href="https://www.engineerica.com/acculite/"
+                                    target="_blank">Accu-Lite</a></strong>, a lightweight version of the attendance
+                            tracking system.</li>
+                        <li>Built <strong><a href="https://www.engineerica.com/accuclass/"
+                                    target="_blank">AccuClass</a></strong>, a class management and scheduling
+                            application.</li>
+                        <li>Implemented <strong><a href="https://www.engineerica.com/conference-planner/"
+                                    target="_blank">Conference Planner</a></strong> for event scheduling and resource
+                            management.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Optimus Bilişim -->
+            <div class="job-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Software Developer & Product Manager</span> <span
+                            style="margin: 0 5px; color: #ccc;">|</span> <span class="company"><a
+                                href="https://obt.com.tr/" target="_blank">Optimus Bilişim</a></span>
+                    </div>
+                    <div class="job-meta">Jan 2024 - Aug 2024</div>
+                </div>
+                <div class="job-details">
+                    <ul>
+                        <li>Architected white-label stock trading applications and SDKs used by multiple financial
+                            institutions (e.g., <a
+                                href="https://play.google.com/store/apps/details?id=com.meksayatirim.mobile"
+                                target="_blank">Meksa Mobile</a>).</li>
+                        <li>Refactored legacy codebases to improve architectural modularity and maintainability.</li>
+                        <li>Implemented security measures to meet penetration testing requirements for financial
+                            software.</li>
+                        <li>Managed the complete application rewrite to resolve performance issues.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Innovance/ Oyak Yatırım -->
+            <div class="job-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Software Developer & Team Lead</span> <span
+                            style="margin: 0 5px; color: #ccc;">|</span> <span class="company"><a
+                                href="https://innovance.com.tr/" target="_blank">Innovance</a> / Oyak Yatırım</span>
+                    </div>
+                    <div class="job-meta">Mar 2023 - Jan 2024</div>
+                </div>
+                <div class="job-details">
+                    <ul>
+                        <li>Led the mobile development team for the <strong><a
+                                    href="https://play.google.com/store/apps/details?id=com.oyakborsa.mobiletrader"
+                                    target="_blank">Oyak Finance Trader</a></strong> application.</li>
+                        <li>Established architectural standards and managed the release pipeline for the Flutter
+                            codebase.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Maximize Capital / Nakit Yok -->
+            <div class="job-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Full Stack Software Developer</span> <span
+                            style="margin: 0 5px; color: #ccc;">|</span> <span class="company"><a
+                                href="https://nakit-yok.com/" target="_blank">Maximize Capital</a> / Nakit Yok</span>
+                    </div>
+                    <div class="job-meta">Mar 2023 - Mar 2024</div>
+                </div>
+                <div class="job-details">
+                    <ul>
+                        <li>Developed <strong><a
+                                    href="https://play.google.com/store/apps/details?id=com.nakityok.mobile"
+                                    target="_blank">NOSH</a></strong>, a food ordering and payment mobile application
+                            using Flutter.</li>
+                        <li>Built the backend infrastructure using <strong>NestJS</strong> and
+                            <strong>PostgreSQL</strong>.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Aymar Tech -->
+            <div class="job-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Software Developer</span> <span
+                            style="margin: 0 5px; color: #ccc;">|</span> <span class="company"><a
+                                href="https://aymar.tech" target="_blank">Aymar Tech</a></span>
+                    </div>
+                    <div class="job-meta">Jul 2022 - Mar 2023</div>
+                </div>
+                <div class="job-details">
+                    <ul>
+                        <li>Led the implementation of "Untangable", an NFT marketplace and Web3-integrated game
+                            platform.</li>
+                        <li>Integrated Web3 wallets and smart contract interactions within the Flutter environment.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- United Software / Wio Bank -->
+            <div class="job-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Flutter Engineer</span> <span
+                            style="margin: 0 5px; color: #ccc;">|</span> <span class="company"><a
+                                href="https://usoftware.co/" target="_blank">United Software</a> / <a
+                                href="https://wio.io/" target="_blank">Wio Bank</a> (Remote)</span>
+                    </div>
+                    <div class="job-meta">Apr 2022 - Feb 2023</div>
+                </div>
+                <div class="job-details">
+                    <ul>
+                        <li>Contributed to <strong><a href="https://apps.apple.com/ae/app/wio-business/id1622363877"
+                                    target="_blank">Wio Business</a></strong>, a digital banking application, focusing
+                            on API integration and performance.</li>
+                        <li>Collaborated with distributed teams to ensure banking compliance and security.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Etiya Information Technologies -->
+            <div class="job-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Principal Mobile Specialist</span> <span
+                            style="margin: 0 5px; color: #ccc;">|</span> <span class="company"><a
+                                href="https://www.etiya.com/en" target="_blank">Etiya Information
+                                Technologies</a></span>
+                    </div>
+                    <div class="job-meta">Feb 2022 - Apr 2022</div>
+                </div>
+                <div class="job-details">
+                    <ul>
+                        <li>Led development of the <strong><a
+                                    href="https://play.google.com/store/apps/details?id=com.togg.toggmobile"
+                                    target="_blank">Trumore Super App</a></strong> (Official App for <a
+                                href="https://www.togg.com.tr/" target="_blank">Togg Car</a>) using Flutter.</li>
+                        <li>Implemented features to meet automotive industry performance standards.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- DOP Digital Operations Services -->
+            <div class="job-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Software Developer & Team Lead</span> <span
+                            style="margin: 0 5px; color: #ccc;">|</span> <span class="company"><a
+                                href="https://www.dop.com.tr/" target="_blank">DOP Digital Operations
+                                Services</a></span>
+                    </div>
+                    <div class="job-meta">Oct 2021 - Feb 2022</div>
+                </div>
+                <div class="job-details">
+                    <ul>
+                        <li>Led mobile development team for <strong><a
+                                    href="https://apps.apple.com/tr/app/sipari%C5%9Fim/id1631982452"
+                                    target="_blank">Siparişim</a></strong> and <strong><a
+                                    href="https://play.google.com/store/apps/details?id=hma.siparisim.restoranisim"
+                                    target="_blank">Restoran Isım Mobil</a></strong> applications.</li>
+                        <li>Implemented micro-frontend architecture to improve scalability across mobile
+                            platforms.</li>
+                        <li>Mentored junior developers on Flutter best practices and architectural patterns.</li>
+                        <li>Contributed to backend development using Python and NestJS.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Internative Software -->
+            <div class="job-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Software Developer</span> <span
+                            style="margin: 0 5px; color: #ccc;">|</span> <span class="company"><a
+                                href="https://internative.net/" target="_blank">Internative Software</a></span>
+                    </div>
+                    <div class="job-meta">Mar 2021 - Oct 2021</div>
+                </div>
+                <div class="job-details">
+                    <ul>
+                        <li>Developed <strong><a
+                                    href="https://play.google.com/store/apps/details?id=all4baby.com.all4baby"
+                                    target="_blank">All4Baby</a></strong>, a parents and baby assistant
+                            application using Flutter.</li>
+                        <li>Built <strong><a href="https://play.google.com/store/apps/details?id=com.internative.sodio"
+                                    target="_blank">Sodio</a></strong>, a social radio application using custom Flutter
+                            UI components.</li>
+                        <li>Implemented interactive mobile UI designs focused on user engagement.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- S'aide Financial Technologies -->
+            <div class="job-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Software Developer</span> <span
+                            style="margin: 0 5px; color: #ccc;">|</span> <span class="company"><a
+                                href="https://s-aide.com/" target="_blank">S'aide Financial Technologies</a></span>
+                    </div>
+                    <div class="job-meta">Apr 2020 - Feb 2021</div>
+                </div>
+                <div class="job-details">
+                    <ul>
+                        <li>Developed <strong><a href="https://apps.apple.com/us/app/saide/id1539900942"
+                                    target="_blank">S'aide</a></strong>, a student assistant and payment application
+                            using Flutter.</li>
+                        <li>Integrated payment gateway APIs for secure transaction processing.</li>
+                        <li>Implemented security measures to pass penetration testing requirements for financial
+                            applications.</li>
+                        <li>Built the initial backend infrastructure using NestJS and MongoDB.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Freelance -->
+            <div class="job-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Full Stack Software Developer</span> <span
+                            style="margin: 0 5px; color: #ccc;">|</span> <span class="company">Freelance</span>
+                    </div>
+                    <div class="job-meta">Jun 2017 - Apr 2020</div>
+                </div>
+                <div class="job-details">
+                    <ul>
+                        <li>Developed web and mobile applications for clients using Ionic, React, and Flutter.
+                        </li>
+                        <li>Delivered custom solutions for small to mid-sized projects across various industries.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="skills">
+            <h3 class="section-title">Technical Skills</h3>
+
+            <div class="skill-category">
+                <span class="category-title">Mobile Development</span>
+                <div class="skills-grid">
+                    <span class="skill-tag">Flutter (7 years)</span>
+                    <span class="skill-tag">Dart</span>
+                    <span class="skill-tag">iOS (Swift)</span>
+                    <span class="skill-tag">Android (Kotlin)</span>
+                    <span class="skill-tag">BLoC / Cubit</span>
+                    <span class="skill-tag">Riverpod</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <span class="category-title">Backend & API</span>
+                <div class="skills-grid">
+                    <span class="skill-tag">NestJS</span>
+                    <span class="skill-tag">NodeJS</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">RestAPI</span>
+                    <span class="skill-tag">GraphQL</span>
+                    <span class="skill-tag">gRPC</span>
+                    <span class="skill-tag">WebSockets</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <span class="category-title">Database & DevOps</span>
+                <div class="skills-grid">
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">Redis</span>
+                    <span class="skill-tag">Firebase</span>
+                    <span class="skill-tag">TypeORM</span>
+                    <span class="skill-tag">CI/CD (Gitlab, Github Actions)</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <span class="category-title">Methodologies & Concepts</span>
+                <div class="skills-grid">
+                    <span class="skill-tag">TDD</span>
+                    <span class="skill-tag">Clean Architecture</span>
+                    <span class="skill-tag">SOLID</span>
+                    <span class="skill-tag">Design Patterns</span>
+                    <span class="skill-tag">Agile / Scrum</span>
+                    <span class="skill-tag">OOP</span>
+                    <span class="skill-tag">Micro-Frontend</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="education">
+            <h3 class="section-title">Education</h3>
+
+            <div class="education-item">
+                <div>
+                    <div class="degree">BS, Information Systems and Technologies</div>
+                    <div class="school">Yeditepe University - Istanbul</div>
+                </div>
+                <div class="grad-date">2021</div>
+            </div>
+
+            <div class="education-item">
+                <div>
+                    <div class="degree">BS, Management Information Systems</div>
+                    <div class="school">Anadolu University</div>
+                </div>
+                <div class="grad-date">2020</div>
+            </div>
+
+            <div class="education-item">
+                <div>
+                    <div class="degree">BS, Physics (Double Major)</div>
+                    <div class="school">Yeditepe University</div>
+                </div>
+                <div class="grad-date">2021</div>
+            </div>
+
+            <div class="education-item">
+                <div>
+                    <div class="degree">MEd, Science Teacher Education</div>
+                    <div class="school">Marmara University</div>
+                    <div class="thesis" style="font-size: 0.85rem; color: #64748b; margin-top: 4px;">
+                        <strong>Thesis:</strong> Leveraging NLP (Natural Language Processing) for Assessing Open-Ended
+                        Examinations
+                    </div>
+                </div>
+                <div class="grad-date">2020</div>
+            </div>
+
+            <div class="education-item">
+                <div>
+                    <div class="degree">B.E. in Chemistry Engineering</div>
+                    <div class="school">Marmara University</div>
+                </div>
+                <div class="grad-date">2015</div>
+            </div>
+
+            <!-- Minor degree combined or removed for brevity if decided, but keeping main ones -->
+            <div class="education-item">
+                <div>
+                    <div class="degree">BSc, Chemistry</div>
+                    <div class="school">Marmara University</div>
+                </div>
+                <div class="grad-date"></div>
+            </div>
+        </section>
+
+        <section class="languages">
+            <h3 class="section-title">Languages</h3>
+            <div class="skills-grid">
+                <span class="skill-tag"
+                    style="background: white; border: 1px solid #e2e8f0; font-weight: 500; color: var(--primary-color);"><strong>Turkish:</strong>
+                    Native</span>
+                <span class="skill-tag"
+                    style="background: white; border: 1px solid #e2e8f0; font-weight: 500; color: var(--primary-color);"><strong>English:</strong>
+                    Professional Proficiency</span>
+            </div>
+        </section>
+
+    </div>
+
+
+
+    <!-- html2pdf Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <script>
+        function generatePDF() {
+            const element = document.querySelector('.container');
+            const button = document.getElementById('pdf-download-btn');
+
+            // Calculate dynamic height for single page
+            // Get the full scroll height of the content
+            const width = element.offsetWidth;
+            const height = element.offsetHeight;
+
+            // Configuration for html2pdf
+            const opt = {
+                margin: 0, // Zero margins for full single page
+                filename: 'Musa_Sahin_CV.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
+                // Set unit to 'px' and provide [width, height] array
+                jsPDF: { unit: 'px', format: [width, height], orientation: 'portrait' },
+                enableLinks: true
+            };
+
+            // Hide button
+            if (button) button.style.display = 'none';
+
+            // Generate
+            html2pdf().set(opt).from(element).save().then(() => {
+                if (button) button.style.display = 'flex';
+            }).catch(err => {
+                console.error(err);
+                if (button) button.style.display = 'flex';
+            });
+        }
+    </script>
+</body>
+
+</html>
