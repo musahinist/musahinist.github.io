@@ -1,27 +1,32 @@
 # Musa Sahin - Interactive Developer CV
 
-This is a personal CV/Resume website built with HTML, CSS, and JavaScript. It features a modern, responsive design and a client-side PDF generation capability.
+This is a personal CV/Resume website built with HTML, CSS, and JavaScript. It features a modern, responsive design and a **high-fidelity native PDF generation** capability.
 
 ## Features
 
 - **Responsive Design:** Optimized for desktop, tablet, and mobile viewing.
 - **Premium UI:** Custom styled header, clean typography (Inter font), and categorized skills section.
-- **PDF Generation:** Includes a "Download PDF" button that generates a high-quality, single-page PDF of the CV directly in the browser using `html2pdf.js`.
+- **Native PDF Generation:** A "Download PDF" button that leverages the browser's native print engine (`window.print()`) with dynamic CSS injection. This ensures:
+  - **Vector Quality:** Text is selectable and crystal clear.
+  - **Single Page Layout:** Automatically calculates content height to prevent awkward page breaks.
+  - **Optimized Print Styles:** Removes shadows and adjusts colors specifically for print/PDF export.
+- **Dynamic Filename:** Automatically renames the document title to include the current date (e.g., `Musa_Sahin_CV_YYYY-MM-DD`) during the print dialog.
 - **ATS Friendly:** Semantic HTML structure.
+- **Favicon:** Custom tab icon included.
 
 ## Structure
 
-- `index.html`: Main content and layout structure.
-- `style.css`: All styling, including the custom "Header Centered" premium theme.
-- `html2pdf.js`: Integrated via CDN for PDF conversion functionality.
+- `index.html`: Main content, layout structure, and the **dynamic PDF generation logic** (embedded JavaScript).
+- `style.css`: All styling, including the custom "Header Centered" premium theme and detailed `@media print` rules.
+- `favicon.png`: Browser tab icon.
 
 ## How to Edit
 
-1. Open `index.html` to update your personal information, experience, or education.
-2. Edit `style.css` to change colors, fonts, or spacing.
-3. The PDF button configuration is located at the bottom of `index.html` in the `<script>` tag.
+1. **Content:** Open `index.html` to update your personal information, experience, or education.
+2. **Styles:** Edit `style.css` to change colors, fonts, or spacing.
+3. **PDF Logic:** The PDF generation logic is located at the bottom of `index.html`. It dynamically creates a `<style>` tag to match the print paper size to the content's exact dimensions.
 
-## 🚀 Deployment (Project Page)
+## 🚀 Deployment (GitHub Pages)
 
 To publish at **`https://musahinist.github.io/resume/`**:
 
@@ -41,7 +46,4 @@ To publish at **`https://musahinist.github.io/resume/`**:
     - Select Source: **Deploy from a branch** (Branch: `main`, Folder: `/`).
     - Save.
 
-🎉 Your CV will be live at: `https://musahinist.github.io/  `
-
-
-
+🎉 Your CV will be live at: `https://musahinist.github.io/resume/`
