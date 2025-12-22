@@ -28,7 +28,7 @@ This is a personal CV/Resume website built with HTML, CSS, and JavaScript. It fe
 
 ## 🚀 Deployment (GitHub Pages)
 
-To publish at **`https://musahinist.github.io`**:
+To publish at [https://musahinist.github.io](https://musahinist.github.io):
 
 1.  **Repository Name:** Create a new repository named **`musahinist.github.io`**.
 2.  **Push Code:**
@@ -46,4 +46,4 @@ To publish at **`https://musahinist.github.io`**:
     - Select Source: **Deploy from a branch** (Branch: `main`, Folder: `/`).
     - Save.
 
-🎉 Your CV will be live at: `https://musahinist.github.io`
+🎉 Your CV will be live at: [https://musahinist.github.io](https://musahinist.github.io)
