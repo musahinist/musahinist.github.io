@@ -498,42 +498,56 @@
 
 
 
-    <!-- html2pdf Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-
     <script>
         function generatePDF() {
-            const element = document.querySelector('.container');
-            const button = document.getElementById('pdf-download-btn');
+            // Calculate the full dimensions of the container or body
+            // We use the container width to ensure it fits the design exactly
+            const container = document.querySelector('.container');
 
-            // Calculate dynamic height for single page
-            // Get the full scroll height of the content
-            const width = element.offsetWidth;
-            const height = element.offsetHeight;
+            // Use Math.floor and subtract a safety buffer (10px) to be absolutely safe against overflow
+            const bodyHeight = Math.floor(container.scrollHeight) - 10;
+            const bodyWidth = Math.ceil(container.scrollWidth);
 
-            // Configuration for html2pdf
-            const opt = {
-                margin: 0, // Zero margins for full single page
-                filename: 'Musa_Sahin_CV.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
-                // Set unit to 'px' and provide [width, height] array
-                jsPDF: { unit: 'px', format: [width, height], orientation: 'portrait' },
-                enableLinks: true
-            };
+            const style = document.createElement('style');
+            style.innerHTML = `
+            @media print {
+                @page {
+                    /* Set size to exact content dimensions */
+                    size: ${bodyWidth}px ${bodyHeight}px; 
+                    margin: 0; 
+                }
+                html, body {
+                    width: ${bodyWidth}px;
+                    height: ${bodyHeight}px;
+                    margin: 0 !important;
+                    padding: 0 !important;
+                    overflow: hidden !important; 
+                }
+                .container {
+                    width: 100% !important;
+                    max-width: none !important;
+                    box-shadow: none !important;
+                    margin: 0 !important;
+                 }
+                
+                /* Explicitly hide the button in this dynamic generated style */
+                #pdf-download-btn, button#pdf-download-btn {
+                    display: none !important;
+                    opacity: 0 !important;
+                    visibility: hidden !important;
+                }
+            }
+        `;
+            document.head.appendChild(style);
 
-            // Hide button
-            if (button) button.style.display = 'none';
+            window.print();
 
-            // Generate
-            html2pdf().set(opt).from(element).save().then(() => {
-                if (button) button.style.display = 'flex';
-            }).catch(err => {
-                console.error(err);
-                if (button) button.style.display = 'flex';
-            });
+            setTimeout(() => {
+                document.head.removeChild(style);
+            }, 1000);
         }
     </script>
 </body>
 
 </html>
+```

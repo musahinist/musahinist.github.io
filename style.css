@@ -280,58 +280,116 @@ h3.section-title::after {
 
 /* ATS & Print Optimization */
 @media print {
+  @page {
+    margin: 0;
+    size: auto;
+  }
+
   body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
     background: white;
     font-size: 9.5pt;
+    color: var(--text-color) !important;
   }
 
   .container {
-    box-shadow: none;
+    width: 100%;
     max-width: 100%;
     margin: 0;
+    padding: 0;
+    box-shadow: none;
+    border: none;
   }
 
-  header {
-    background: none !important;
-    /* Save ink */
-    color: black !important;
-    padding: 0 0 20px 0;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #000;
+  /* Force background graphics to print */
+  header,
+  header.header-centered,
+  .job-meta {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 
-  .header-left h1 {
-    color: black !important;
+  /* Skill tags - Remove shadow, force clean white look */
+  .skill-tag {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    background-color: white !important;
+    box-shadow: none !important;
+    /* Removes the "gray" smudge */
+    border: 1px solid #ddd !important;
+    /* Ensure clear border */
   }
 
-  .header-left h2 {
-    color: #444 !important;
+  /* Hide UI elements */
+  #pdf-download-btn {
+    display: none !important;
   }
 
-  .header-right a {
-    color: black !important;
-  }
-
-  .header-right i {
-    color: black !important;
-  }
-
-  /* Ensure text is black for OCR/ATS */
-  p,
-  li,
-  span,
-  div {
-    color: black !important;
-  }
-
-  .job-item {
-    padding-left: 0;
-    border-left: none;
-  }
-
+  /* Optimize links for print */
   a {
-    text-decoration: none;
-    color: black !important;
+    color: var(--accent-color) !important;
+    text-decoration: none !important;
+  }
+
+  /* Prevent extra blank page */
+  html,
+  body {
+    height: auto !important;
+    overflow: hidden !important;
+    background: white;
+  }
+
+  /* If you want to show URL after link, uncomment the following:
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+  } */
+
+  /* Prevent awkward page breaks */
+  section {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Body headings (Dark) */
+  h1,
+  h2,
+  h3 {
+    page-break-after: avoid;
+    break-after: avoid;
+    color: var(--primary-color);
+  }
+
+  h3.section-title {
+    color: var(--accent-color) !important;
+  }
+
+  /* Header Headings (Force White) */
+  header h1,
+  header h2,
+  header.header-centered h1,
+  header.header-centered h2,
+  header.header-centered .header-right a,
+  header.header-centered .header-right div {
+    color: white !important;
+    text-shadow: none !important;
+  }
+
+  header.header-centered .header-left h2 {
+    color: #cbd5e1 !important;
+    /* Lighter slate for subtitle */
+  }
+
+  .job-item,
+  .education-item {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Reset header paddings for print */
+  header.header-centered {
+    padding: 30px 20px;
   }
 }
 
