@@ -504,8 +504,9 @@
             // We use the container width to ensure it fits the design exactly
             const container = document.querySelector('.container');
 
-            // Use Math.floor and subtract a safety buffer (10px) to be absolutely safe against overflow
-            const bodyHeight = Math.floor(container.scrollHeight) - 10;
+            // Add a buffer to the height to ensure everything fits comfortably
+            // This extra space (e.g. +20px) makes the paper slightly longer than the content.
+            const bodyHeight = Math.ceil(container.scrollHeight) + 20;
             const bodyWidth = Math.ceil(container.scrollWidth);
 
             const style = document.createElement('style');
@@ -540,14 +541,18 @@
         `;
             document.head.appendChild(style);
 
+            const originalTitle = document.title;
+            const date = new Date().toISOString().split('T')[0];
+            document.title = `Musa_Sahin_CV_${date}`;
+
             window.print();
 
             setTimeout(() => {
                 document.head.removeChild(style);
+                document.title = originalTitle;
             }, 1000);
         }
     </script>
 </body>
 
 </html>
-```
