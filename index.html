@@ -11,9 +11,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Language Toggle Button Styles */
+        #lang-toggle-btn {
+            position: fixed !important;
+            top: 25px !important;
+            left: 25px !important;
+            background-color: #2563eb !important;
+            color: white !important;
+            border: none !important;
+            width: 50px !important;
+            height: 50px !important;
+            border-radius: 50% !important;
+            font-size: 16px !important;
+            font-weight: bold !important;
+            cursor: pointer !important;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4) !important;
+            z-index: 2147483647 !important;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            transition: transform 0.2s !important;
+        }
+
+        #lang-toggle-btn:hover {
+            transform: scale(1.1);
+        }
+
+        @media print {
+            #lang-toggle-btn {
+                display: none !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Toggle Tr/En Button -->
+    <button id="lang-toggle-btn" onclick="toggleLanguage()" title="Switch Language">TR</button>
+
     <!-- Fixed PDF Download Button -->
     <button id="pdf-download-btn" onclick="generatePDF()" title="Download as PDF" style="
         position: fixed !important;
@@ -38,7 +74,8 @@
     </button>
 
 
-    <div class="container">
+    <!-- ENGLISH VERSION -->
+    <div id="cv-en" class="container">
         <header class="header-centered">
             <div class="header-left">
                 <h1>Musa SAHIN</h1>
@@ -391,7 +428,7 @@
                         <li>Created a lightweight <strong>2.5D game engine</strong> for Flutter (written in <strong>C++
                                 & Dart</strong>) featuring declarative
                             widgets, physics simulation, and spatial audio.</li>
-                        <li>Successfully used to develop and publish <strong>over 20 games</strong> across mobile
+                        <li>Successfully used to develop <strong>10+ high-quality demo games</strong> across mobile
                             platforms.</li>
                         <li>Designed a custom entity-component system (ECS) optimized for Dart and Flutter's rendering
                             pipeline.</li>
@@ -550,16 +587,553 @@
                     Professional Proficiency</span>
             </div>
         </section>
+    </div>
+
+    <!-- TURKISH VERSION (Hidden by default) -->
+    <div id="cv-tr" class="container" style="display: none;">
+        <header class="header-centered">
+            <div class="header-left">
+                <h1>Musa SAHIN</h1>
+                <h2>Kıdemli Yazılım Mühendisi</h2>
+            </div>
+            <div class="header-right">
+                <div class="contact-row">
+                    <a href="mailto:sahinmusa@gmail.com"><i class="fa-solid fa-envelope"></i> sahinmusa@gmail.com</a>
+                    <a href="tel:+905053836143"><i class="fa-solid fa-phone"></i> +90 505 383 61 43</a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Istanbul,+Turkiye" target="_blank"><i
+                            class="fa-solid fa-location-dot"></i> İstanbul, Türkiye</a>
+                </div>
+                <div class="social-row">
+                    <a href="https://tr.linkedin.com/in/musa-sahin" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/musahinist" target="_blank"><i class="fa-brands fa-github"></i>
+                        GitHub</a>
+                    <a href="https://stackoverflow.com/users/8354697/musa-sahin" target="_blank"><i
+                            class="fa-brands fa-stack-overflow"></i> StackOverflow</a>
+                    <a href="https://www.youtube.com/@alchemist9240" target="_blank"><i
+                            class="fa-brands fa-youtube"></i> Youtube</a>
+                </div>
+            </div>
+        </header>
+
+        <section class="summary">
+            <h3 class="section-title">Özet</h3>
+            <p>
+                <strong>9 yıllık deneyime</strong> sahip Yazılım Mühendisi. Temel uzmanlık alanı <strong>Flutter (7
+                    yıl)</strong> ve <strong>NestJS (2 yıl)</strong> olup, ayrıca <strong>iOS (Swift)</strong>,
+                <strong>Android (Kotlin)</strong> ve <strong>React Native</strong> alanlarında pratik tecrübeye
+                sahiptir.
+                Ölçeklenebilir mimariler kurma, mobil güvenlik standartlarını uygulama ve <strong>TDD</strong> & Clean
+                Architecture ile otomatik test iş akışları oluşturma konularında yetkindir.
+                <strong>FinTech, Coğrafi Bilgi Sistemleri (Geomatics), E-ticaret, Eğitim ve Oyun</strong> sektörlerinde
+                uzmanlaşmıştır.
+                <strong>NLP</strong> (Doğal Dil İşleme) üzerine tez çalışmaları yürütmüş olup, geliştirme süreçlerini
+                hızlandırmak için <strong>Yapay Zeka araçlarını</strong> aktif olarak kullanmaktadır.
+                Yüksek yazılım kalitesini sürdürmek için Test Güdümlü Geliştirme (TDD) ve temiz kod prensiplerini
+                benimser.
+            </p>
+        </section>
+
+        <section class="experience">
+            <h3 class="section-title">İş Deneyimi</h3>
+
+            <!-- Orion Innovation -->
+            <div class="job-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Kıdemli Mobil Geliştirici</span> <span
+                            style="margin: 0 5px; color: #ccc;">|</span> <span class="company"><a
+                                href="https://www.orioninc.com/" target="_blank">Orion Innovation</a></span>
+                    </div>
+                    <div class="job-meta">Eki 2024 - Günümüz</div>
+                </div>
+                <div class="job-details">
+                    <ul>
+                        <li>Avcılık ve Arazi Yönetimi için geliştirilen çapraz platform (Mobil & Web) uygulaması
+                            <strong><a href="https://www.huntstand.com/" target="_blank">HunStand</a></strong>'in
+                            Flutter ile geliştirilmesi.
+                        </li>
+                        <li>Kod kalitesini optimize etmek, refactoring süreçlerini otomatize etmek ve özellik
+                            geliştirmeyi hızlandırmak için <strong>Üretken Yapay Zeka araçlarının</strong> kullanılması.
+                        </li>
+                        <li>Birden fazla üründe coğrafi işleme performansını artırmak için dâhili
+                            <strong>MapSDK</strong>'nın güncellenmesi.
+                        </li>
+                        <li>Eski (legacy) modüllerdeki teknik borçları gidermek için <strong>Test Güdümlü Geliştirme
+                                (TDD)</strong> iş akışlarının uygulanması.</li>
+                        <li>Modüler mimari ve durum yönetimi (state management) konularında kod incelemeleri (code
+                            review) yapılması ve takım arkadaşlarına mentorluk verilmesi.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Engineerica Inc -->
+            <div class="job-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Yazılım Geliştirici</span> <span
+                            style="margin: 0 5px; color: #ccc;">|</span> <span class="company"><a
+                                href="https://www.engineerica.com/" target="_blank">Engineerica Inc</a> (Remote /
+                            Uzaktan)</span>
+                    </div>
+                    <div class="job-meta">Tem 2023 - Eki 2025</div>
+                </div>
+                <div class="job-details">
+                    <ul>
+                        <li>Devlet okulu otobüs lojistiğini izlemek için geliştirilen <strong><a
+                                    href="https://apps.apple.com/ng/app/accubus/id6475717217"
+                                    target="_blank">AccuBus</a></strong> uygulamasının geliştirilmesi ve bakımı.</li>
+                        <li>Sorun çözme hızını ve kod dokümantasyon verimliliğini artırmak için geliştirme sürecine
+                            <strong>Yapay Zeka destekli iş akışlarının</strong> entegre edilmesi.
+                        </li>
+                        <li><strong><a href="https://apps.apple.com/us/app/iaccu/id414711091"
+                                    target="_blank">iAccu</a></strong> öğrenci yoklama mobil ve kiosk uygulamasının
+                            çapraz platform desteği için Flutter ile yeniden yazılması.</li>
+                        <li><strong><a href="https://apps.apple.com/us/app/accudemia/id1673109841"
+                                    target="_blank">Accudemia</a></strong> akademik merkez yönetim sistemine Native
+                            Swift ve Kotlin kullanılarak katkıda bulunulması.</li>
+                        <li>Yoklama takip sisteminin hafifletilmiş versiyonu olan <strong><a
+                                    href="https://www.engineerica.com/acculite/" target="_blank">Accu-Lite</a></strong>
+                            uygulamasının geliştirilmesi.</li>
+                        <li>Sınıf yönetimi ve planlama uygulaması <strong><a
+                                    href="https://www.engineerica.com/accuclass/"
+                                    target="_blank">AccuClass</a></strong>'ın inşası.</li>
+                        <li>Etkinlik planlama ve kaynak yönetimi için <strong><a
+                                    href="https://www.engineerica.com/conference-planner/" target="_blank">Conference
+                                    Planner</a></strong> uygulamasının hayata geçirilmesi.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Optimus Bilişim -->
+            <div class="job-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Yazılım Geliştirici & Ürün Yöneticisi</span> <span
+                            style="margin: 0 5px; color: #ccc;">|</span> <span class="company"><a
+                                href="https://obt.com.tr/" target="_blank">Optimus Bilişim</a></span>
+                    </div>
+                    <div class="job-meta">Oca 2024 - Ağu 2024</div>
+                </div>
+                <div class="job-details">
+                    <ul>
+                        <li>Birçok finans kurumu tarafından (örn. <a
+                                href="https://play.google.com/store/apps/details?id=com.meksayatirim.mobile"
+                                target="_blank">Meksa Mobile</a>) kullanılan white-label borsa işlem uygulamaları ve
+                            SDK'larının mimarisinin tasarlanması.</li>
+                        <li>Mimari modülerliği ve sürdürülebilirliği artırmak için legacy kod tabanlarının refactor
+                            edilmesi.</li>
+                        <li>Finansal yazılımlar için sızma testi (penetration testing) gereksinimlerini karşılayacak
+                            güvenlik önlemlerinin uygulanması.</li>
+                        <li>Performans sorunlarını çözmek için uygulamanın baştan aşağı yeniden yazılma sürecinin
+                            yönetilmesi.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Innovance/ Oyak Yatırım -->
+            <div class="job-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Yazılım Geliştirici & Takım Lideri</span> <span
+                            style="margin: 0 5px; color: #ccc;">|</span> <span class="company"><a
+                                href="https://innovance.com.tr/" target="_blank">Innovance</a> / Oyak Yatırım</span>
+                    </div>
+                    <div class="job-meta">Mar 2023 - Oca 2024</div>
+                </div>
+                <div class="job-details">
+                    <ul>
+                        <li><strong><a href="https://play.google.com/store/apps/details?id=com.oyakborsa.mobiletrader"
+                                    target="_blank">Oyak Finance Trader</a></strong> uygulaması için mobil geliştirme
+                            ekibine liderlik edilmesi.</li>
+                        <li>Mimari standartların oluşturulması ve Flutter kod tabanı için sürüm (release) süreçlerinin
+                            yönetilmesi.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Maximize Capital / Nakit Yok -->
+            <div class="job-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Full Stack Yazılım Geliştirici</span> <span
+                            style="margin: 0 5px; color: #ccc;">|</span> <span class="company"><a
+                                href="https://nakit-yok.com/" target="_blank">Maximize Capital</a> / Nakit Yok</span>
+                    </div>
+                    <div class="job-meta">Mar 2023 - Mar 2024</div>
+                </div>
+                <div class="job-details">
+                    <ul>
+                        <li>Flutter kullanılarak yemek siparişi ve ödeme mobil uygulaması <strong><a
+                                    href="https://play.google.com/store/apps/details?id=com.nakityok.mobile"
+                                    target="_blank">NOSH</a></strong>'un geliştirilmesi.</li>
+                        <li>Backend altyapısının <strong>NestJS</strong> ve <strong>PostgreSQL</strong> kullanılarak
+                            kurulması.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Aymar Tech -->
+            <div class="job-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Yazılım Geliştirici</span> <span
+                            style="margin: 0 5px; color: #ccc;">|</span> <span class="company"><a
+                                href="https://aymar.tech" target="_blank">Aymar Tech</a></span>
+                    </div>
+                    <div class="job-meta">Tem 2022 - Mar 2023</div>
+                </div>
+                <div class="job-details">
+                    <ul>
+                        <li><strong>React Native</strong> ve <strong>Flutter</strong> kullanılarak NFT pazaryeri ve Web3
+                            entegreli oyun platformu "Untangable"ın geliştirilmesine liderlik edilmesi.</li>
+                        <li>Web3 cüzdanlarının ve akıllı kontrat etkileşimlerinin hem React Native hem de Flutter
+                            ortamlarına entegre edilmesi.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- United Software / Wio Bank -->
+            <div class="job-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Flutter Mühendisi</span> <span
+                            style="margin: 0 5px; color: #ccc;">|</span> <span class="company"><a
+                                href="https://usoftware.co/" target="_blank">United Software</a> / <a
+                                href="https://wio.io/" target="_blank">Wio Bank</a> (Remote / Uzaktan)</span>
+                    </div>
+                    <div class="job-meta">Nis 2022 - Şub 2023</div>
+                </div>
+                <div class="job-details">
+                    <ul>
+                        <li>Dijital bankacılık uygulaması <strong><a
+                                    href="https://apps.apple.com/ae/app/wio-business/id1622363877" target="_blank">Wio
+                                    Business</a></strong>'a API entegrasyonu ve performans odaklı katkıda bulunulması.
+                        </li>
+                        <li>Bankacılık uyumluluğu ve güvenliğini sağlamak için dağıtık ekiplerle işbirliği yapılması.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Etiya Information Technologies -->
+            <div class="job-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Kıdemli Mobil Uzman</span> <span
+                            style="margin: 0 5px; color: #ccc;">|</span> <span class="company"><a
+                                href="https://www.etiya.com/en" target="_blank">Etiya Information
+                                Technologies</a></span>
+                    </div>
+                    <div class="job-meta">Şub 2022 - Nis 2022</div>
+                </div>
+                <div class="job-details">
+                    <ul>
+                        <li>Flutter kullanılarak <strong><a
+                                    href="https://play.google.com/store/apps/details?id=com.togg.toggmobile"
+                                    target="_blank">Trumore Super App</a></strong> (<a href="https://www.togg.com.tr/"
+                                target="_blank">Togg</a> Resmi Uygulaması) geliştirme sürecine liderlik edilmesi.</li>
+                        <li>Otomotiv endüstrisi performans standartlarını karşılayacak özelliklerin uygulanması.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- DOP Digital Operations Services -->
+            <div class="job-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Yazılım Geliştirici & Takım Lideri</span> <span
+                            style="margin: 0 5px; color: #ccc;">|</span> <span class="company"><a
+                                href="https://www.dop.com.tr/" target="_blank">DOP Digital Operations
+                                Services</a></span>
+                    </div>
+                    <div class="job-meta">Eki 2021 - Şub 2022</div>
+                </div>
+                <div class="job-details">
+                    <ul>
+                        <li><strong><a href="https://apps.apple.com/tr/app/sipari%C5%9Fim/id1631982452"
+                                    target="_blank">Siparişim</a></strong> ve <strong><a
+                                    href="https://play.google.com/store/apps/details?id=hma.siparisim.restoranisim"
+                                    target="_blank">Restoran Isım Mobil</a></strong> uygulamaları için mobil geliştirme
+                            ekibine liderlik edilmesi.</li>
+                        <li>Ölçeklenebilirliği artırmak için mikro-frontend (micro-frontend) mimarisinin mobil
+                            platformlara uygulanması.</li>
+                        <li>Flutter en iyi uygulamaları ve mimari desenler konusunda genç (junior) geliştiricilere
+                            mentorluk yapılması.</li>
+                        <li>Python (FastAPI) ve NestJS kullanılarak backend geliştirmelerine katkıda bulunulması.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Internative Software -->
+            <div class="job-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Yazılım Geliştirici</span> <span
+                            style="margin: 0 5px; color: #ccc;">|</span> <span class="company"><a
+                                href="https://internative.net/" target="_blank">Internative Software</a></span>
+                    </div>
+                    <div class="job-meta">Mar 2021 - Eki 2021</div>
+                </div>
+                <div class="job-details">
+                    <ul>
+                        <li>Flutter kullanılarak ebeveyn ve bebek asistanı uygulaması <strong><a
+                                    href="https://play.google.com/store/apps/details?id=all4baby.com.all4baby"
+                                    target="_blank">All4Baby</a></strong>'nin geliştirilmesi.</li>
+                        <li>Özel Flutter UI bileşenleri kullanılarak sosyal radyo uygulaması <strong><a
+                                    href="https://play.google.com/store/apps/details?id=com.internative.sodio"
+                                    target="_blank">Sodio</a></strong>'nun inşası.</li>
+                        <li>Kullanıcı etkileşimine odaklı interaktif mobil arayüz tasarımlarının uygulanması.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- S'aide Financial Technologies -->
+            <div class="job-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Yazılım Geliştirici</span> <span
+                            style="margin: 0 5px; color: #ccc;">|</span> <span class="company"><a
+                                href="https://s-aide.com/" target="_blank">S'aide Financial Technologies</a></span>
+                    </div>
+                    <div class="job-meta">Nis 2020 - Şub 2021</div>
+                </div>
+                <div class="job-details">
+                    <ul>
+                        <li>Flutter kullanılarak öğrenci asistanı ve ödeme uygulaması <strong><a
+                                    href="https://apps.apple.com/us/app/saide/id1539900942"
+                                    target="_blank">S'aide</a></strong>'in geliştirilmesi.</li>
+                        <li>Güvenli işlem süreçleri için ödeme geçidi (gateway) API'lerinin entegre edilmesi.</li>
+                        <li>Finansal uygulamalarda sızma testi gereksinimlerini karşılamak için güvenlik önlemlerinin
+                            uygulanması.</li>
+                        <li>NestJS ve MongoDB kullanılarak ilk backend altyapısının kurulması.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Freelance -->
+            <div class="job-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Full Stack Yazılım Geliştirici</span> <span
+                            style="margin: 0 5px; color: #ccc;">|</span> <span class="company">Freelance</span>
+                    </div>
+                    <div class="job-meta">Haz 2017 - Nis 2020</div>
+                </div>
+                <div class="job-details">
+                    <ul>
+                        <li>Ionic, React, React Native ve Flutter kullanılarak müşteriler için web ve mobil
+                            uygulamaların geliştirilmesi.</li>
+                        <li>Çeşitli sektörlerdeki küçük ve orta ölçekli projeler için özel çözümler sunulması.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="projects">
+            <h3 class="section-title">Kişisel Projeler</h3>
+
+            <!-- Flash Engine -->
+            <div class="job-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Flash Game Engine</span> <span
+                            style="margin: 0 5px; color: #ccc;">|</span> <span class="company"><a
+                                href="https://github.com/musahinist/flash-engine" target="_blank">Açık Kaynak</a></span>
+                    </div>
+                </div>
+                <div class="job-details">
+                    <ul>
+                        <li>Flutter için deklaratif widget'lar, fizik simülasyonu ve uzamsal ses özelliklerine sahip
+                            hafif bir <strong>2.5D oyun motorunun</strong> (<strong>C++ & Dart</strong> ile)
+                            oluşturulması.</li>
+                        <li>Mobil platformlarda <strong>10+ yüksek kaliteli demo oyunun</strong> geliştirilmesinde
+                            başarıyla kullanıldı.</li>
+                        <li>Dart ve Flutter'ın render hattı (rendering pipeline) için optimize edilmiş özel bir
+                            varlık-bileşen sistemi (ECS) tasarlandı.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Guardrail -->
+            <div class="job-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Guardrail</span> <span style="margin: 0 5px; color: #ccc;">|</span>
+                        <span class="company">AI Kod İstihbarat & Güvenlik Platformu</span>
+                    </div>
+                </div>
+                <div class="job-details">
+                    <ul>
+                        <li>Kurumsal kod tabanları için veri sızıntısı risklerini ortadan kaldıran, %100 yerel çalışan,
+                            <strong>dilden bağımsız, gizlilik odaklı bir Yapay Zeka platformunun</strong> mimarisinin
+                            tasarlanması (<strong>Orion'daki canlı projelerde pilot testleri yapıldı</strong>).
+                        </li>
+                        <li>Bağlam farkındalıklı kod incelemeleri ve otomatik etki analizi sağlamak için <strong>Graph
+                                DB (KuzuDB) & Vector DB (ChromaDB)</strong> kullanan bir <strong>PR İstihbarat</strong>
+                            modülü geliştirildi.</li>
+                        <li>Bağlam penceresi sınırlamalarını çözmek ve kod tabanı evriminden sürekli öğrenmeyi
+                            sistemleştirmek için <strong>Yerel LLM'lerin (Ollama)</strong> <strong>Adaptif RAG boru
+                                hatları</strong> ile entegre edilmesi.</li>
+                        <li><strong>Teknoloji Yığını:</strong> Python, FastAPI, React, KuzuDB, ChromaDB, Ollama.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="skills">
+            <h3 class="section-title">Teknik Yetkinlikler</h3>
+
+            <div class="skill-category">
+                <span class="category-title">Mobil Geliştirme</span>
+                <div class="skills-grid">
+                    <span class="skill-tag">Flutter (7 yıl)</span>
+                    <span class="skill-tag">Dart</span>
+                    <span class="skill-tag">iOS (Swift)</span>
+                    <span class="skill-tag">Android (Kotlin)</span>
+                    <span class="skill-tag">React Native</span>
+                    <span class="skill-tag">BLoC / Cubit</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <span class="category-title">Backend & API</span>
+                <div class="skills-grid">
+                    <span class="skill-tag">NestJS</span>
+                    <span class="skill-tag">NodeJS</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">RestAPI</span>
+                    <span class="skill-tag">GraphQL</span>
+                    <span class="skill-tag">gRPC</span>
+                    <span class="skill-tag">WebSockets</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <span class="category-title">Veritabanı & DevOps</span>
+                <div class="skills-grid">
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">Redis</span>
+                    <span class="skill-tag">Firebase</span>
+                    <span class="skill-tag">TypeORM</span>
+                    <span class="skill-tag">CI/CD (Gitlab, Github Actions)</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <span class="category-title">Metodolojiler & Kavramlar</span>
+                <div class="skills-grid">
+                    <span class="skill-tag">TDD</span>
+                    <span class="skill-tag">Clean Architecture</span>
+                    <span class="skill-tag">SOLID</span>
+                    <span class="skill-tag">Tasarım Desenleri</span>
+                    <span class="skill-tag">Agile / Scrum</span>
+                    <span class="skill-tag">OOP</span>
+                    <span class="skill-tag">Micro-Frontend</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="education">
+            <h3 class="section-title">Eğitim</h3>
+
+            <div class="education-item">
+                <div>
+                    <div class="degree">Lisans, Bilişim Sistemleri ve Teknolojileri</div>
+                    <div class="school">Yeditepe Üniversitesi - İstanbul</div>
+                </div>
+                <div class="grad-date">2021</div>
+            </div>
+
+            <div class="education-item">
+                <div>
+                    <div class="degree">Lisans, Yönetim Bilişim Sistemleri</div>
+                    <div class="school">Anadolu Üniversitesi</div>
+                </div>
+                <div class="grad-date">2020</div>
+            </div>
+
+            <div class="education-item">
+                <div>
+                    <div class="degree">Lisans, Fizik (Çift Anadal)</div>
+                    <div class="school">Yeditepe Üniversitesi</div>
+                </div>
+                <div class="grad-date">2021</div>
+            </div>
+
+            <div class="education-item">
+                <div>
+                    <div class="degree">Yüksek Lisans, Fen Bilgisi Öğretmenliği</div>
+                    <div class="school">Marmara Üniversitesi</div>
+                    <div class="thesis" style="font-size: 0.85rem; color: #64748b; margin-top: 4px;">
+                        <strong>Tez:</strong> Açık Uçlu Sınavların Değerlendirilmesinde NLP (Doğal Dil İşleme) Kullanımı
+                    </div>
+                </div>
+                <div class="grad-date">2020</div>
+            </div>
+
+            <div class="education-item">
+                <div>
+                    <div class="degree">Lisans, Kimya Mühendisliği</div>
+                    <div class="school">Marmara Üniversitesi</div>
+                </div>
+                <div class="grad-date">2015</div>
+            </div>
+
+            <div class="education-item">
+                <div>
+                    <div class="degree">Lisans, Kimya</div>
+                    <div class="school">Marmara Üniversitesi</div>
+                </div>
+                <div class="grad-date"></div>
+            </div>
+        </section>
+
+        <section class="languages">
+            <h3 class="section-title">Diller</h3>
+            <div class="skills-grid">
+                <span class="skill-tag"
+                    style="background: white; border: 1px solid #e2e8f0; font-weight: 500; color: var(--primary-color);"><strong>Türkçe:</strong>
+                    Anadil</span>
+                <span class="skill-tag"
+                    style="background: white; border: 1px solid #e2e8f0; font-weight: 500; color: var(--primary-color);"><strong>İngilizce:</strong>
+                    Profesyonel Yetkinlik</span>
+            </div>
+        </section>
 
     </div>
 
 
 
     <script>
+        function toggleLanguage() {
+            const enContainer = document.getElementById('cv-en');
+            const trContainer = document.getElementById('cv-tr');
+            const toggleBtn = document.getElementById('lang-toggle-btn');
+
+            if (enContainer.style.display === 'none') {
+                // Switch to English
+                enContainer.style.display = 'block';
+                trContainer.style.display = 'none';
+                toggleBtn.textContent = 'TR'; // Button shows target language
+                document.title = 'Musa SAHIN - Resume';
+            } else {
+                // Switch to Turkish
+                enContainer.style.display = 'none';
+                trContainer.style.display = 'block';
+                toggleBtn.textContent = 'EN'; // Button shows target language
+                document.title = 'Musa SAHIN - Özgeçmiş';
+            }
+        }
+
         function generatePDF() {
             // Calculate the full dimensions of the container or body
             // We use the container width to ensure it fits the design exactly
-            const container = document.querySelector('.container');
+            const container = document.querySelector('.container:not([style*="display: none"])');
 
             // Add a buffer to the height to ensure everything fits comfortably
             // This extra space (e.g. +20px) makes the paper slightly longer than the content.
@@ -586,10 +1160,11 @@
                     max-width: none !important;
                     box-shadow: none !important;
                     margin: 0 !important;
-                 }
+                    border: none !important;
+                }
                 
                 /* Explicitly hide the button in this dynamic generated style */
-                #pdf-download-btn, button#pdf-download-btn {
+                #pdf-download-btn, button#pdf-download-btn, #lang-toggle-btn {
                     display: none !important;
                     opacity: 0 !important;
                     visibility: hidden !important;
@@ -600,7 +1175,8 @@
 
             const originalTitle = document.title;
             const date = new Date().toISOString().split('T')[0];
-            document.title = `Musa_Sahin_CV_${date}`;
+            const isTr = document.getElementById('cv-tr').style.display !== 'none';
+            document.title = isTr ? `Musa_Sahin_CV_TR_${date}` : `Musa_Sahin_CV_EN_${date}`;
 
             window.print();
 
