@@ -341,12 +341,6 @@ h3.section-title::after {
     background: white;
   }
 
-  /* If you want to show URL after link, uncomment the following:
-  a[href^="http"]::after {
-    content: " (" attr(href) ")";
-    font-size: 0.8em;
-  } */
-
   /* Prevent awkward page breaks */
   section {
     page-break-inside: avoid;
@@ -559,6 +553,56 @@ header.header-centered .header-right a:hover i {
   border-radius: 4px;
   background: white;
   padding: 2px;
+}
+
+/* --- Mobile Responsiveness --- */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+  }
+
+  /* Header Stacking */
+  header.header-centered {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+    gap: 20px;
+  }
+
+  .header-left h1 {
+    font-size: 2rem;
+    /* Smaller title */
+  }
+
+  .header-right {
+    text-align: center;
+  }
+
+  .header-right .contact-row,
+  .header-right .social-row {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Content Padding */
+  section {
+    padding: 0 20px;
+    /* Reduced side padding */
+  }
+
+  /* Footer Stacking */
+  .cv-footer {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .cv-footer .footer-text {
+    font-size: 0.75rem;
+  }
 }
 
 /* Print Optimization for Footer */

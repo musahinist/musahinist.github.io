@@ -566,7 +566,6 @@
                 <div class="grad-date">2015</div>
             </div>
 
-            <!-- Minor degree combined or removed for brevity if decided, but keeping main ones -->
             <div class="education-item">
                 <div>
                     <div class="degree">BSc, Chemistry</div>
@@ -1169,10 +1168,26 @@
             // We use the container width to ensure it fits the design exactly
             const container = document.querySelector('.container:not([style*="display: none"])');
 
+            // Store original styles to revert later
+            const originalWidth = container.style.width;
+            const originalMinWidth = container.style.minWidth;
+            const originalMaxWidth = container.style.maxWidth;
+
+            // FORCE DESKTOP WIDTH:
+            // Prevents "narrow PDF" on mobile devices. We force the container to be 900px (Desktop size)
+            // so the browser reflows text as if it were on a computer, then we measure height.
+            const DESKTOP_WIDTH = 900;
+            container.style.width = `${DESKTOP_WIDTH}px`;
+            container.style.minWidth = `${DESKTOP_WIDTH}px`;
+            container.style.maxWidth = 'none';
+
+            // Force reflow
+            void container.offsetHeight;
+
             // Add a buffer to the height to ensure everything fits comfortably
             // This extra space (e.g. +20px) makes the paper slightly longer than the content.
             const bodyHeight = Math.ceil(container.scrollHeight) + 20;
-            const bodyWidth = Math.ceil(container.scrollWidth);
+            const bodyWidth = DESKTOP_WIDTH; // Use fixed desktop width
 
             const style = document.createElement('style');
             style.innerHTML = `
@@ -1217,6 +1232,11 @@
             setTimeout(() => {
                 document.head.removeChild(style);
                 document.title = originalTitle;
+
+                // Revert container styles
+                container.style.width = originalWidth;
+                container.style.minWidth = originalMinWidth;
+                container.style.maxWidth = originalMaxWidth;
             }, 1000);
         }
     </script>
