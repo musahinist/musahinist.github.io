@@ -587,6 +587,20 @@
                     Professional Proficiency</span>
             </div>
         </section>
+
+        <!-- Footer -->
+        <footer class="cv-footer">
+            <div class="footer-group left">
+                <img src="favicon.png" alt="Logo" class="footer-logo">
+                <div class="footer-text">Handcrafted with HTML & CSS by Musa Sahin</div>
+            </div>
+            <div class="footer-text center">Last updated: January 2026</div>
+            <div class="footer-group">
+                <a href="https://musahinist.github.io" class="footer-link" target="_blank">musahinist.github.io</a>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=60x60&data=https://musahinist.github.io"
+                    alt="QR Code" class="footer-qr">
+            </div>
+        </footer>
     </div>
 
     <!-- TURKISH VERSION (Hidden by default) -->
@@ -1105,6 +1119,20 @@
             </div>
         </section>
 
+        <!-- Footer -->
+        <footer class="cv-footer">
+            <div class="footer-group left">
+                <img src="favicon.png" alt="Logo" class="footer-logo">
+                <div class="footer-text">Musa Şahin tarafından HTML & CSS ile hazırlanmıştır</div>
+            </div>
+            <div class="footer-text center">Son güncelleme: Ocak 2026</div>
+            <div class="footer-group">
+                <a href="https://musahinist.github.io" class="footer-link" target="_blank">musahinist.github.io</a>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=60x60&data=https://musahinist.github.io"
+                    alt="QR Code" class="footer-qr">
+            </div>
+        </footer>
+
     </div>
 
 
@@ -1130,6 +1158,12 @@
             }
         }
 
+        /**
+         * CRITICAL: SINGLE-PAGE PDF GENERATION LOGIC
+         * This function dynamically calculates the exact height of the content and sets the PDF page size
+         * to match it. This prevents the browser from splitting the CV into multiple A4 pages.
+         * DO NOT DELETE OR SIMPLIFY THIS LOGIC.
+         */
         function generatePDF() {
             // Calculate the full dimensions of the container or body
             // We use the container width to ensure it fits the design exactly

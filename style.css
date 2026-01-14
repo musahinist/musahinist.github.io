@@ -63,6 +63,7 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
+  /* Removed duplicate margin-bottom */
 }
 
 .header-left h1 {
@@ -492,4 +493,90 @@ header.header-centered .header-right a:hover {
 header.header-centered .header-right a:hover i {
   color: #60a5fa;
   /* Lighter blue on hover */
+}
+
+/* Footer Styles (Restored) */
+.cv-footer {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  height: auto;
+  min-height: 40px;
+  width: 100%;
+  margin-top: auto;
+  border-top: 4px solid var(--accent-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
+}
+
+.cv-footer .footer-text {
+  color: #94a3b8;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.cv-footer .footer-text.center {
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+.cv-footer .footer-link {
+  color: #94a3b8;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.cv-footer .footer-link:hover {
+  color: white;
+  transform: translateY(-1px);
+}
+
+.cv-footer .footer-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cv-footer .footer-group.left {
+  gap: 10px;
+}
+
+.cv-footer .footer-logo {
+  height: 32px;
+  width: 32px;
+  border-radius: 6px;
+  /* Softer radius for small size */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cv-footer .footer-qr {
+  height: 32px;
+  width: 32px;
+  border-radius: 4px;
+  background: white;
+  padding: 2px;
+}
+
+/* Print Optimization for Footer */
+@media print {
+  .cv-footer {
+    display: flex !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    z-index: 100;
+  }
+
+  .cv-footer .footer-text,
+  .cv-footer .footer-link {
+    color: #94a3b8 !important;
+  }
 }
