@@ -111,10 +111,9 @@
                 Experienced in building scalable architectures, implementing mobile security standards, and establishing
                 automated testing workflows through <strong>TDD</strong> & Clean Architecture.
                 Specialized in <strong>FinTech, Geomatics, E-commerce, Education, and Gaming</strong> domains.
-                Conducted thesis research on <strong>NLP</strong> (Natural Language Processing) and actively
-                leverages specific <strong>AI tools</strong> to accelerate development life-cycles.
-                Practices Test-Driven Development (TDD) and follows clean code principles to maintain high software
-                quality.
+                Conducted thesis research on <strong>NLP</strong> (Natural Language Processing).
+                Implements algorithms directly from research papers (as seen in <strong>Guardrail</strong>) to build
+                custom AI agents and autonomous systems.
             </p>
         </section>
 
@@ -452,19 +451,39 @@
                     </div>
                 </div>
                 <div class="job-details">
-                    <ul>
-                        <li>Architected a <strong>language-agnostic, privacy-first AI platform</strong> that runs 100%
-                            locally, eliminating
-                            data leakage risks for enterprise codebases (<strong>pilot-tested in live projects at
-                                Orion</strong>).</li>
-                        <li>Engineered a <strong>PR Intelligence</strong> module using <strong>Graph DB
-                                (KuzuDB) & Vector DB (ChromaDB)</strong> to provide context-aware code reviews and
-                            automated impact analysis.
+                    <ul style="display: grid; grid-template-columns: 1fr; gap: 5px;">
+                        <li><strong>Platform Overview & Impact:</strong>
+                            Developed an advanced AI Code Intelligence platform to automate security and code quality
+                            checks. <strong>Successfully pilot tested at <a href="https://www.orioninc.com/"
+                                    target="_blank">Orion Innovation</a></strong>, demonstrating capabilities in
+                            reducing technical debt and enhancing review workflows.
                         </li>
-                        <li>Integrated <strong>Local LLMs (Ollama)</strong> with <strong>Adaptive RAG pipelines</strong>
-                            to resolve context window limitations and enable continuous system learning from codebase
-                            evolution.</li>
-                        <li><strong>Tech Stack:</strong> Python, FastAPI, React, KuzuDB, ChromaDB, Ollama.</li>
+                        <li><strong>Agent Development & Orchestration:</strong>
+                            Built a custom, recursive RLM framework (<a href="https://arxiv.org/html/2512.24601v1"
+                                target="_blank">arXiv:2512.24601</a>) with autonomous planning (map-reduce tasks) and
+                            self-corrections via verification loops. Designed a Multi-Agent System (Explorer, Analyst,
+                            Critic) that executes code safely within a Python REPL Sandbox.
+                        </li>
+                        <li><strong>RAG & Knowledge Systems:</strong>
+                            Architected a Hybrid RAG system combining Semantic Search (ChromaDB) with Knowledge Graphs
+                            (KuzuDB). Mapped code structures (AST, function calls) to answer complex "Blast Radius"
+                            queries with 99% accuracy.
+                        </li>
+                        <li><strong>LLMOps & Local Deployment:</strong>
+                            Engineered a privacy-first Local LLM Pipeline using Ollama (SLM models). Implemented Cost
+                            Optimization strategies with model routing and L1/L2 caching, ensuring efficient enterprise
+                            deployment.
+                        </li>
+                        <li><strong>Dataset Generation & Fine-Tuning:</strong>
+                            Implemented a <strong>Human-in-the-Loop</strong> mechanism that captures developer feedback
+                            and stores it in <strong>Graph & Vector DBs</strong> to build high-quality datasets for
+                            future <strong>LoRA Fine-Tuning</strong>.
+                        </li>
+                        <li><strong>Enterprise Integration:</strong>
+                            Designed agents capable of interacting with corporate ecosystems (Jira, GitHub/GitLab APIs)
+                            for automated issue tracking and CI/CD analysis, effectively bridging the gap between AI
+                            reasoning and DevOps workflows.
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -491,24 +510,49 @@
                 <div class="skills-grid">
                     <span class="skill-tag">NestJS</span>
                     <span class="skill-tag">NodeJS</span>
-                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Python (FastAPI)</span>
                     <span class="skill-tag">TypeScript</span>
                     <span class="skill-tag">RestAPI</span>
                     <span class="skill-tag">GraphQL</span>
                     <span class="skill-tag">gRPC</span>
                     <span class="skill-tag">WebSockets</span>
+                    <span class="skill-tag">RabbitMQ</span>
+                    <span class="skill-tag">Redis</span>
                 </div>
             </div>
 
             <div class="skill-category">
-                <span class="category-title">Database & DevOps</span>
+                <span class="category-title">Database</span>
                 <div class="skills-grid">
+                    <span class="skill-tag">Graph Databases (KuzuDB, Neo4j)</span>
+                    <span class="skill-tag">Vector Search (ChromaDB)</span>
                     <span class="skill-tag">PostgreSQL</span>
                     <span class="skill-tag">MongoDB</span>
-                    <span class="skill-tag">Redis</span>
                     <span class="skill-tag">Firebase</span>
-                    <span class="skill-tag">TypeORM</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <span class="category-title">Cloud & DevOps</span>
+                <div class="skills-grid">
+                    <span class="skill-tag">Docker</span>
                     <span class="skill-tag">CI/CD (Gitlab, Github Actions)</span>
+                    <span class="skill-tag">LLMOps Pipelines</span>
+                    <span class="skill-tag">Model Serving (vLLM)</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <span class="category-title">AI & LLM Engineering</span>
+                <div class="skills-grid">
+                    <span class="skill-tag">Recursive RLM (Paper-Based)</span>
+
+                    <span class="skill-tag">Multi-Agent Systems</span>
+                    <span class="skill-tag">Hybrid RAG (Graph + Vector)</span>
+
+                    <span class="skill-tag">Local SLMs</span>
+                    <span class="skill-tag">AI Safety & Sandbox</span>
+                    <span class="skill-tag">Cost & Model Routing</span>
                 </div>
             </div>
 
@@ -517,11 +561,12 @@
                 <div class="skills-grid">
                     <span class="skill-tag">TDD</span>
                     <span class="skill-tag">Clean Architecture</span>
+                    <span class="skill-tag">Microservices</span>
                     <span class="skill-tag">SOLID</span>
                     <span class="skill-tag">Design Patterns</span>
                     <span class="skill-tag">Agile / Scrum</span>
                     <span class="skill-tag">OOP</span>
-                    <span class="skill-tag">Micro-Frontend</span>
+
                 </div>
             </div>
         </section>
@@ -653,10 +698,10 @@
                 Architecture ile otomatik test iş akışları oluşturma konularında yetkindir.
                 <strong>FinTech, Coğrafi Bilgi Sistemleri (Geomatics), E-ticaret, Eğitim ve Oyun</strong> sektörlerinde
                 uzmanlaşmıştır.
-                <strong>NLP</strong> (Doğal Dil İşleme) üzerine tez çalışmaları yürütmüş olup, geliştirme süreçlerini
-                hızlandırmak için <strong>Yapay Zeka araçlarını</strong> aktif olarak kullanmaktadır.
-                Yüksek yazılım kalitesini sürdürmek için Test Güdümlü Geliştirme (TDD) ve temiz kod prensiplerini
-                benimser.
+                <strong>NLP</strong> (Doğal Dil İşleme) üzerine tez çalışmaları yürütmüştür.
+                Sadece AI araçlarını kullanmakla kalmaz; araştırma makalelerindeki algoritmaları (bkz.
+                <strong>Guardrail</strong>) doğrudan uygulayarak özelleştirilmiş AI ajanları ve otonom sistemler
+                geliştirir.
             </p>
         </section>
 
@@ -990,23 +1035,48 @@
             <div class="job-item">
                 <div class="job-header">
                     <div>
-                        <span class="job-title">Guardrail</span> <span style="margin: 0 5px; color: #ccc;">|</span>
+                        <span class="job-title">Guardrail &nbsp;</span> <span
+                            style="margin: 0 5px; color: #ccc;">|</span>
                         <span class="company">AI Kod İstihbarat & Güvenlik Platformu</span>
                     </div>
                 </div>
                 <div class="job-details">
-                    <ul>
-                        <li>Kurumsal kod tabanları için veri sızıntısı risklerini ortadan kaldıran, %100 yerel çalışan,
-                            <strong>dilden bağımsız, gizlilik odaklı bir Yapay Zeka platformunun</strong> mimarisinin
-                            tasarlanması (<strong>Orion'daki canlı projelerde pilot testleri yapıldı</strong>).
+                    <ul style="display: grid; grid-template-columns: 1fr; gap: 5px;">
+                        <li><strong>Platform Genel Bakış & Etki:</strong>
+                            Güvenlik ve kod kalitesi kontrollerini otomatize etmek için gelişmiş bir AI Kod İstihbarat
+                            platformu geliştirdim. <strong><a href="https://www.orioninc.com/" target="_blank">Orion
+                                    Innovation</a></strong> bünyesinde <strong>başarıyla pilot test edilmiş</strong>
+                            olup, teknik borcu azaltma ve inceleme iş akışlarını iyileştirme yeteneklerini
+                            kanıtlamıştır.
                         </li>
-                        <li>Bağlam farkındalıklı kod incelemeleri ve otomatik etki analizi sağlamak için <strong>Graph
-                                DB (KuzuDB) & Vector DB (ChromaDB)</strong> kullanan bir <strong>PR İstihbarat</strong>
-                            modülü geliştirildi.</li>
-                        <li>Bağlam penceresi sınırlamalarını çözmek ve kod tabanı evriminden sürekli öğrenmeyi
-                            sistemleştirmek için <strong>Yerel LLM'lerin (Ollama)</strong> <strong>Adaptif RAG boru
-                                hatları</strong> ile entegre edilmesi.</li>
-                        <li><strong>Teknoloji Yığını:</strong> Python, FastAPI, React, KuzuDB, ChromaDB, Ollama.</li>
+                        <li><strong>Ajan Geliştirme & Orkestrasyon:</strong>
+                            Otonom planlama (map-reduce görevleri) ve doğrulama döngüleri (verification loops) ile kendi
+                            kendini düzelten, özelleştirilmiş, yinelemeli (recursive) bir RLM mimarisi (<a
+                                href="https://arxiv.org/html/2512.24601v1" target="_blank">arXiv:2512.24601</a>) inşa
+                            ettim.
+                            Python REPL Sandbox içerisinde kodu güvenli bir şekilde çalıştıran bir Çoklu-Ajan Sistemi
+                            (Kaşif, Analist, Kritik) tasarladım.
+                        </li>
+                        <li><strong>RAG & Bilgi Sistemleri:</strong>
+                            Anlamsal Arama (ChromaDB) ile Bilgi Grafikleri'ni (KuzuDB) birleştiren Hibrit bir RAG
+                            sistemi mimarisi kurdum. Karmaşık "Blast Radius" sorgularını %99 doğrulukla yanıtlamak için
+                            kod yapılarını (AST, fonksiyon çağrıları) haritalandırdım.
+                        </li>
+                        <li><strong>LLMOps & Yerel Dağıtım:</strong>
+                            Ollama (SLM modelleri) kullanarak gizlilik odaklı bir Yerel LLM Hattı inşa ettim. Model
+                            yönlendirme ve L1/L2 önbellekleme ile Maliyet Optimizasyonu stratejileri uygulayarak verimli
+                            bir kurumsal dağıtım sağladım.
+                        </li>
+                        <li><strong>Veri Seti Oluşturma & Fine-Tuning:</strong>
+                            Geliştirici geri bildirimlerini yakalayan ve gelecekteki <strong>LoRA Fine-Tuning</strong>
+                            süreçleri için <strong>Graph & Vector DB</strong> üzerinde saklayarak yüksek kaliteli veri
+                            setleri oluşturan bir <strong>Human-in-the-Loop</strong> mekanizması kurdum.
+                        </li>
+                        <li><strong>Kurumsal Entegrasyon:</strong>
+                            Otomatik sorun takibi ve CI/CD analizi için kurumsal ekosistemlerle (Jira, GitHub/GitLab
+                            API'leri) etkileşime girebilen, YZ akıl yürütmesi ile DevOps iş akışları arasındaki boşluğu
+                            dolduran ajanlar tasarladım.
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -1015,6 +1085,8 @@
 
         <section class="skills">
             <h3 class="section-title">Teknik Yetkinlikler</h3>
+
+
 
             <div class="skill-category">
                 <span class="category-title">Mobil Geliştirme</span>
@@ -1033,24 +1105,49 @@
                 <div class="skills-grid">
                     <span class="skill-tag">NestJS</span>
                     <span class="skill-tag">NodeJS</span>
-                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Python (FastAPI)</span>
                     <span class="skill-tag">TypeScript</span>
                     <span class="skill-tag">RestAPI</span>
                     <span class="skill-tag">GraphQL</span>
                     <span class="skill-tag">gRPC</span>
                     <span class="skill-tag">WebSockets</span>
+                    <span class="skill-tag">RabbitMQ</span>
+                    <span class="skill-tag">Redis</span>
                 </div>
             </div>
 
             <div class="skill-category">
-                <span class="category-title">Veritabanı & DevOps</span>
+                <span class="category-title">Veritabanı</span>
                 <div class="skills-grid">
+                    <span class="skill-tag">Graph Databases (KuzuDB, Neo4j)</span>
+                    <span class="skill-tag">Vector Search (ChromaDB)</span>
                     <span class="skill-tag">PostgreSQL</span>
                     <span class="skill-tag">MongoDB</span>
-                    <span class="skill-tag">Redis</span>
                     <span class="skill-tag">Firebase</span>
-                    <span class="skill-tag">TypeORM</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <span class="category-title">Cloud & DevOps</span>
+                <div class="skills-grid">
+                    <span class="skill-tag">Docker</span>
                     <span class="skill-tag">CI/CD (Gitlab, Github Actions)</span>
+                    <span class="skill-tag">LLMOps Pipelines</span>
+                    <span class="skill-tag">Model Serving (vLLM)</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <span class="category-title">AI & LLM Mühendisliği</span>
+                <div class="skills-grid">
+                    <span class="skill-tag">Recursive RLM (Paper-Based)</span>
+
+                    <span class="skill-tag">Multi-Agent Systems</span>
+                    <span class="skill-tag">Hybrid RAG (Graph + Vector)</span>
+
+                    <span class="skill-tag">Local SLMs</span>
+                    <span class="skill-tag">AI Safety & Sandbox</span>
+                    <span class="skill-tag">Cost & Model Routing</span>
                 </div>
             </div>
 
@@ -1059,11 +1156,12 @@
                 <div class="skills-grid">
                     <span class="skill-tag">TDD</span>
                     <span class="skill-tag">Clean Architecture</span>
+                    <span class="skill-tag">Microservices</span>
                     <span class="skill-tag">SOLID</span>
                     <span class="skill-tag">Tasarım Desenleri</span>
                     <span class="skill-tag">Agile / Scrum</span>
                     <span class="skill-tag">OOP</span>
-                    <span class="skill-tag">Micro-Frontend</span>
+
                 </div>
             </div>
         </section>
