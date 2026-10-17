@@ -142,9 +142,9 @@ h3.section-title::after {
 
 /* Summary */
 .summary p {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--text-color);
-  line-height: 1.8;
+  line-height: 1.6;
   max-width: 95%;
 }
 
@@ -411,7 +411,7 @@ header.header-centered .header-left {
 
 header.header-centered .header-left h1 {
   color: white;
-  font-size: 3.5rem;
+  font-size: 2.9rem;
   margin-bottom: 8px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -419,8 +419,8 @@ header.header-centered .header-left h1 {
 header.header-centered .header-left h2 {
   color: #94a3b8;
   /* Slate 400 */
-  font-size: 1.3rem;
-  letter-spacing: 4px;
+  font-size: 1.05rem;
+  letter-spacing: 3px;
   font-weight: 500;
   margin-bottom: 0;
   text-transform: uppercase;
@@ -623,4 +623,77 @@ header.header-centered .header-right a:hover i {
   .cv-footer .footer-link {
     color: #94a3b8 !important;
   }
+}
+/* ATS: keep PDF text in document order. Positioned elements are painted
+   after normal-flow content, which pushed section titles and experience
+   after skills/education in the PDF text layer. Positioning every section
+   child (without offsets) restores DOM order and does not move anything. */
+@media print {
+  header > *,
+  section > * {
+    position: relative;
+  }
+}
+
+/* Additional Experience: compact one-line entries */
+.job-item.compact {
+  margin-bottom: 16px;
+}
+
+.job-item.compact .job-header {
+  margin-bottom: 2px;
+}
+
+.job-item.compact .job-title {
+  font-size: 1rem;
+}
+
+.compact-desc {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+.compact-desc a {
+  color: inherit;
+}
+
+/* Company on its own line under the job title */
+.job-header .company {
+  display: block;
+  margin-top: 2px;
+}
+
+/* Education: other degrees on one line */
+.education-other {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: var(--secondary-color);
+  line-height: 1.6;
+}
+
+.education-other strong {
+  color: var(--primary-color);
+}
+
+/* Availability badge under the title */
+.availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #bbf7d0;
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.4);
+}
+
+.availability-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
 }
